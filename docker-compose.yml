@@ -1,0 +1,12 @@
+services:
+  ros2-turtlebot3:
+    image: pjmrobotics/ros2-turtlebot3-vnc:latest
+    container_name: ros2-turtlebot3-vnc
+    shm_size: 2gb
+    stdin_open: true
+    tty: true
+    ports:
+      - "6080:80"
+      - "5900:5900"
+    environment:
+      - TURTLEBOT3_MODEL=burger
